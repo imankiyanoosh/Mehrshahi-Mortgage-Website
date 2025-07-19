@@ -2,6 +2,7 @@ import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
+import ScrollToTop from './components/utils/ScrollToTop';
 import HomePage from './components/pages/HomePage';
 import LoanServicePage from './components/pages/LoanServicePage';
 import LoansPage from './components/pages/LoansPage';
@@ -15,6 +16,7 @@ import { loanTypes } from './data/loans';
 function App() {
   return (
     <div className="min-h-screen bg-white">
+      <ScrollToTop />
       <Header />
       <Routes>
         <Route path="/" element={<HomePage />} />
