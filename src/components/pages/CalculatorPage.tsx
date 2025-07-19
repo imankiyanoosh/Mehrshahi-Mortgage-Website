@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { ArrowLeft, Calculator as CalcIcon, TrendingUp, DollarSign, Percent, Calendar, Home } from 'lucide-react';
+import { ArrowLeft, ArrowRight, Calculator as CalcIcon, TrendingUp, DollarSign, Percent, Calendar, Home } from 'lucide-react';
 import { Button } from '../ui/Button';
 import { Card, CardContent, CardHeader } from '../ui/Card';
 import { calculators } from '../../data/calculators';
