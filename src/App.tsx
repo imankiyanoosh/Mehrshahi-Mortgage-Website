@@ -11,6 +11,7 @@ import AboutPage from './components/pages/AboutPage';
 import ContactPage from './components/pages/ContactPage';
 import LocalAreasPage from './components/pages/LocalAreasPage';
 import CityPage from './components/pages/CityPage';
+import CalculatorPage from './components/pages/CalculatorPage';
 import { loanTypes } from './data/loans';
 
 function App() {
@@ -22,6 +23,7 @@ function App() {
         <Route path="/" element={<HomePage />} />
         <Route path="/loans" element={<LoansPage />} />
         <Route path="/calculators" element={<CalculatorsPage />} />
+        <Route path="/calculators/:calculatorSlug" element={<CalculatorPage />} />
         <Route path="/local-areas" element={<LocalAreasPage />} />
         <Route path="/local-areas/:citySlug" element={<CityPage />} />
         <Route path="/about" element={<AboutPage />} />
