@@ -11,7 +11,7 @@ const LocalAreasPage: React.FC = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white pt-20">
+    <div className="min-h-screen bg-white pt-16">
       {/* Header */}
       <div className="bg-gradient-to-r from-navy-900 to-primary-900 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -27,11 +27,19 @@ const LocalAreasPage: React.FC = () => {
               Expert mortgage services throughout the San Fernando Valley. Deep local knowledge 
               and personalized service for every community we serve.
             </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+              <Button size="lg" className="bg-gold-600 hover:bg-gold-700">
+                Find Your Area
+              </Button>
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-navy-900">
+                Get Market Report
+              </Button>
+            </div>
           </div>
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 bg-gray-50">
         {/* Stats Section */}
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
           <div className="text-center">

@@ -22,21 +22,34 @@ const CalculatorsPage: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-white pt-20">
+    <div className="min-h-screen bg-white pt-16">
       {/* Header */}
       <div className="bg-gradient-to-r from-navy-900 to-primary-900 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
+            <div className="flex items-center justify-center mb-4">
+              <span className="px-4 py-2 bg-white/20 backdrop-blur-sm text-white text-sm font-medium rounded-full">
+                Free Financial Tools
+              </span>
+            </div>
             <h1 className="text-4xl font-bold mb-4">Mortgage Calculator Hub</h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               Make informed decisions with our comprehensive suite of mortgage calculators. 
               Get instant results for payments, affordability, refinancing, and more.
             </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+              <Button size="lg" className="bg-gold-600 hover:bg-gold-700">
+                Start Calculating
+              </Button>
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-navy-900">
+                Get Expert Help
+              </Button>
+            </div>
           </div>
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 bg-gray-50">
         {/* Categories */}
         {categories.map((category) => {
           const categoryCalculators = calculators.filter(calc => calc.category === category.id);

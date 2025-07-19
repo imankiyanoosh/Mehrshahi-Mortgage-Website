@@ -29,21 +29,34 @@ const LoansPage: React.FC = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-gray-50 pt-20">
+    <div className="min-h-screen bg-white pt-16">
       {/* Header */}
       <div className="bg-gradient-to-r from-navy-900 to-primary-900 text-white py-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center">
+            <div className="flex items-center justify-center mb-4">
+              <span className="px-4 py-2 bg-white/20 backdrop-blur-sm text-white text-sm font-medium rounded-full">
+                20+ Loan Programs Available
+              </span>
+            </div>
             <h1 className="text-4xl font-bold mb-4">Comprehensive Loan Solutions</h1>
             <p className="text-xl text-gray-300 max-w-3xl mx-auto">
               From conventional loans to specialized financing, we offer 20+ loan products 
               to meet your unique homeownership and investment goals.
             </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center mt-8">
+              <Button size="lg" className="bg-gold-600 hover:bg-gold-700">
+                Get Pre-Approved
+              </Button>
+              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-navy-900">
+                Schedule Consultation
+              </Button>
+            </div>
           </div>
         </div>
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 bg-gray-50">
         {/* Search and Filters */}
         <div className="mb-12">
           <div className="flex flex-col lg:flex-row gap-6 items-center justify-between">
