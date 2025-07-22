@@ -13,6 +13,8 @@ const Header: React.FC = () => {
   const dropdownRef = useRef<HTMLDivElement>(null);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 
+  // Check if we're on the homepage
+  const isHomePage = location.pathname === '/';
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -103,7 +105,9 @@ const Header: React.FC = () => {
       
       <header
         className={`fixed top-0 left-0 right-0 z-40 transition-all duration-300 ${
-          isScrolled ? 'bg-white/95 backdrop-blur-md shadow-md' : 'bg-transparent'
+          isScrolled || !isHomePage 
+            ? 'bg-white/95 backdrop-blur-md shadow-md' 
+            : 'bg-transparent'
         }`}
         role="banner"
       >
@@ -117,12 +121,12 @@ const Header: React.FC = () => {
                 </div>
                 <div className="hidden sm:block">
                   <div className={`text-lg font-bold transition-colors ${
-                    isScrolled ? 'text-navy-900' : 'text-white'
+                    isScrolled || !isHomePage ? 'text-navy-900' : 'text-white'
                   }`}>
                     Helen Mehrshahi
                   </div>
                   <div className={`text-xs transition-colors ${
-                    isScrolled ? 'text-gray-600' : 'text-gray-300'
+                    isScrolled || !isHomePage ? 'text-gray-600' : 'text-gray-300'
                   }`}>
                     Mortgage Solutions
                   </div>
@@ -143,7 +147,7 @@ const Header: React.FC = () => {
                       >
                         <button
                           className={`flex items-center text-sm font-medium transition-colors duration-200 ${
-                            isScrolled
+                            isScrolled || !isHomePage
                               ? 'text-gray-700 hover:text-primary-600'
                               : 'text-white hover:text-gold-400'
                           }`}
@@ -284,7 +288,7 @@ const Header: React.FC = () => {
                         to={item.href}
                         onClick={() => item.href.startsWith('#') ? handleNavigation(item.href) : undefined}
                         className={`text-sm font-medium transition-colors duration-200 ${
-                          isScrolled
+                          isScrolled || !isHomePage
                             ? 'text-gray-700 hover:text-primary-600'
                             : 'text-white hover:text-gold-400'
                         }`}
@@ -308,7 +312,7 @@ const Header: React.FC = () => {
             <button
               type="button"
               className={`lg:hidden p-2 rounded-md transition-colors ${
-                isScrolled ? 'text-gray-700 hover:bg-gray-100' : 'text-white hover:bg-white/10'
+                isScrolled || !isHomePage ? 'text-gray-700 hover:bg-gray-100' : 'text-white hover:bg-white/10'
               }`}
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-expanded={isMenuOpen}
