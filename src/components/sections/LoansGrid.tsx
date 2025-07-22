@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { Search, Filter, ArrowRight, Star } from 'lucide-react';
+import { Search, Filter, ArrowRight, Star, Phone } from 'lucide-react';
 import { Card, CardContent, CardHeader } from '../ui/Card';
 import { Button } from '../ui/Button';
 import { loanTypes } from '../../data/loans';
@@ -193,10 +193,21 @@ const LoansGrid: React.FC = () => {
               Let our experts analyze your situation and recommend the best loan program.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-primary-600">
+              <Button 
+                size="lg" 
+                variant="outline" 
+                className="border-white text-white hover:bg-white hover:text-primary-600 transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                onClick={() => window.open('tel:8185550123', '_self')}
+              >
+                <Phone className="w-5 h-5 mr-2" />
                 Free Consultation
               </Button>
-              <Button size="lg" className="bg-white text-primary-600 hover:bg-gray-100">
+              <Button 
+                size="lg" 
+                className="bg-white text-primary-600 hover:bg-gray-100 transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                onClick={() => setShowQuickForm('general')}
+              >
+                <Star className="w-5 h-5 mr-2" />
                 Get Pre-Qualified
               </Button>
             </div>
