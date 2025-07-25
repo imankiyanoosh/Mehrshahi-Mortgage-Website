@@ -90,7 +90,7 @@ const Hero: React.FC = () => {
               <Button
                 size="lg"
                 variant="outline"
-                className="border-white/30 text-white hover:bg-white/10"
+                className="border-white/30 text-white hover:bg-white hover:text-navy-900 transition-all duration-300"
               >
                 Calculate Payment
               </Button>
