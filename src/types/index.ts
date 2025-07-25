@@ -15,7 +15,7 @@ export interface Calculator {
   id: string;
   title: string;
   description: string;
-  category: 'purchase' | 'refinance' | 'investment';
+  category: 'purchase' | 'refinance' | 'investment' | 'alt-doc' | 'credit' | 'commercial' | 'renovation' | 'advanced';
   slug: string;
   icon: string;
 }
