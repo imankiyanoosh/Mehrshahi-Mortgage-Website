@@ -237,7 +237,7 @@ const CalculatorHub: React.FC = () => {
             <Button size="lg" className="bg-white text-navy-900 hover:bg-gray-100">
               Schedule Free Consultation
             </Button>
-            <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+            <Button size="lg" variant="outline" className="!bg-transparent !text-white !border-white hover:!bg-white/10 hover:!text-white hover:!border-white transition duration-200">
               Call (818) 555-0123
             </Button>
           </div>
