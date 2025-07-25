@@ -322,7 +322,7 @@ const MortgageRatesSection: React.FC = () => {
                   Get Pre-Approved Now
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Button>
-                <Button size="lg" variant="outline" className="border-white/30 text-white hover:bg-white/10">
+                <Button size="lg" variant="outline" className="!bg-transparent !text-white !border-white hover:!bg-white/10 hover:!text-white hover:!border-white transition duration-200 flex items-center justify-center">
                   <Calendar className="w-5 h-5 mr-2" />
                   Schedule 30-Min Call
                 </Button>
