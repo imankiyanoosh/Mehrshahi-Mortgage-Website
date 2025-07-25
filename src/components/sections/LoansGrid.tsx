@@ -204,7 +204,7 @@ const LoansGrid: React.FC = () => {
               </Button>
               <Button 
                 size="lg" 
-                className="bg-white text-primary-600 hover:bg-gray-100 transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                className="bg-white text-navy-900 hover:bg-gray-100 hover:text-navy-800 transition-all duration-300 hover:scale-105 hover:shadow-lg"
                 onClick={() => setShowQuickForm('general')}
               >
                 <Star className="w-5 h-5 mr-2" />
