@@ -294,10 +294,7 @@ const MortgageRatesSection: React.FC = () => {
                       </Button>
                     </Link>
                     <Button 
-                      fullWidth 
-                      size="sm" 
-                      variant="outline" 
-                      className="bg-transparent border-white text-blue hover:bg-white/20 transition duration-200 font-medium flex items-center justify-center"
+                     className="w-full flex items-center justify-center px-4 py-2 border border-white text-white bg-transparent hover:bg-white/20 transition duration-200 font-medium rounded"
                     >
                       <Phone className="w-4 h-4 mr-2" />
                       Talk to Expert
