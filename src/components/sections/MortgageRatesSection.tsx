@@ -297,7 +297,7 @@ const MortgageRatesSection: React.FC = () => {
                       fullWidth 
                       size="sm" 
                       variant="outline" 
-                      className="border-blue-700 text-blue-700 hover:bg-blue-50 hover:text-blue-800 hover:border-blue-800"
+                      className="border-white text-white hover:bg-white/20 transition duration-200 font-medium flex items-center justify-center"
 
                     >
                       <Phone className="w-4 h-4 mr-2" />
