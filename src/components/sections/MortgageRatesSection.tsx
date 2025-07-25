@@ -298,7 +298,6 @@ const MortgageRatesSection: React.FC = () => {
                       size="sm" 
                       variant="outline" 
                       className="bg-transparent border-white text-white hover:bg-white/20 transition duration-200 font-medium flex items-center justify-center"
-
                     >
                       <Phone className="w-4 h-4 mr-2" />
                       Talk to Expert
