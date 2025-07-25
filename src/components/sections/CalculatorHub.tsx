@@ -14,6 +14,12 @@ const CalculatorHub: React.FC = () => {
     return IconComponent || CalcIcon;
   };
 
+  const categoryColors: Record<string, string> = {
+  purchase: 'bg-emerald-500',
+  refinance: 'bg-blue-500',
+  investment: 'bg-purple-500',
+};
+
   const categories = [
     { id: 'purchase', label: 'Purchase', color: 'emerald', description: 'Home buying calculators' },
     { id: 'refinance', label: 'Refinance', color: 'blue', description: 'Refinancing tools' },
