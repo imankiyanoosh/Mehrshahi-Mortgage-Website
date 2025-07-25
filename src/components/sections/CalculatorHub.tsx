@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowRight, TrendingUp, Calculator as CalcIcon, Sparkles, ChevronDown, ChevronUp } from 'lucide-react';
+import { ArrowRight, TrendingUp, Calculator as CalcIcon, Sparkles, ChevronDown, ChevronUp, Home, RefreshCw, Building, FileX, Scale, Briefcase, Hammer, Settings } from 'lucide-react';
 import { Card, CardContent, CardHeader } from '../ui/Card';
 import { Button } from '../ui/Button';
 import { calculators } from '../../data/calculators';
@@ -19,57 +19,65 @@ const CalculatorHub: React.FC = () => {
     { 
       id: 'purchase', 
       label: 'Purchase', 
+      icon: Home,
       color: 'emerald', 
-      description: 'Home buying calculators',
+      description: 'First-time & returning buyers',
       subtitle: 'First-time & returning buyers'
     },
     { 
       id: 'refinance', 
       label: 'Refinance', 
+      icon: RefreshCw,
       color: 'blue', 
-      description: 'Refinancing tools',
+      description: 'Lower rates & cash-out options',
       subtitle: 'Lower rates & cash-out options'
     },
     { 
       id: 'investment', 
       label: 'Investment', 
+      icon: Building,
       color: 'purple', 
-      description: 'Investment property tools',
+      description: 'Rental & flip properties',
       subtitle: 'Rental & flip properties'
     },
     { 
       id: 'alt-doc', 
       label: 'Alternative Documentation', 
+      icon: FileX,
       color: 'orange', 
-      description: 'Non-traditional income verification',
+      description: 'Self-employed & business owners',
       subtitle: 'Self-employed & business owners'
     },
     { 
       id: 'credit', 
       label: 'Credit & Prequalification', 
+      icon: Scale,
       color: 'green', 
-      description: 'Credit health & qualification tools',
+      description: 'Assess readiness & improve profile',
       subtitle: 'Assess readiness & improve profile'
     },
     { 
       id: 'commercial', 
       label: 'Commercial', 
+      icon: Briefcase,
       color: 'indigo', 
-      description: 'Business & commercial financing',
+      description: 'Commercial real estate & business loans',
       subtitle: 'Commercial real estate & business loans'
     },
     { 
       id: 'renovation', 
       label: 'Renovation', 
+      icon: Hammer,
       color: 'yellow', 
-      description: 'Remodeling & renovation financing',
+      description: 'Home improvements & ROI',
       subtitle: 'Home improvements & ROI'
     },
     { 
       id: 'advanced', 
       label: 'Advanced Tools', 
+      icon: Settings,
       color: 'red', 
-      description: 'Strategic & specialized calculators',
+      description: 'Advanced strategies & analysis',
       subtitle: 'Advanced strategies & analysis'
     }
   ];
@@ -120,27 +128,62 @@ const CalculatorHub: React.FC = () => {
           </p>
         </div>
 
-        {/* Category Tabs - Horizontal Scroll */}
-        <div className="mb-12">
-          <div className="overflow-x-auto pb-4">
-            <div className="flex space-x-2 min-w-max">
-              {categories.map((category) => (
-                <button
+        {/* Bento Grid Categories */}
+        <div className="mb-16">
+          <div className="text-center mb-12">
+            <h3 className="text-2xl font-bold text-navy-900 mb-4">Choose Your Calculator Category</h3>
+            <p className="text-lg text-gray-600">Select a category to explore specialized mortgage calculators</p>
+          </div>
+          
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+            {categories.map((category, index) => {
+              const IconComponent = category.icon;
+              const isActive = activeCategory === category.id;
+              
+              return (
+                <Card
                   key={category.id}
-                  onClick={() => setActiveCategory(category.id)}
-                  className={`flex-shrink-0 px-6 py-4 rounded-xl text-sm font-medium transition-all duration-300 border-2 ${
-                    activeCategory === category.id
-                      ? `bg-${category.color}-500 text-white border-${category.color}-500 shadow-lg transform scale-105`
-                      : 'bg-white text-gray-700 border-gray-200 hover:border-gray-300 hover:bg-gray-50'
+                  className={`cursor-pointer transition-all duration-300 hover:scale-[1.03] hover:shadow-xl group ${
+                    isActive 
+                      ? `ring-2 ring-${category.color}-500 shadow-lg bg-gradient-to-br from-${category.color}-50 to-${category.color}-100` 
+                      : 'hover:shadow-lg bg-white'
                   }`}
+                  onClick={() => setActiveCategory(category.id)}
+                  style={{ 
+                    animationDelay: `${index * 100}ms`,
+                    animation: 'fadeIn 0.6s ease-out forwards'
+                  }}
                 >
-                  <div className="text-center">
-                    <div className="font-semibold">{category.label}</div>
-                    <div className="text-xs opacity-80 mt-1">{category.subtitle}</div>
-                  </div>
-                </button>
-              ))}
-            </div>
+                  <CardContent className="p-6 text-center">
+                    <div className={`w-16 h-16 mx-auto mb-4 rounded-2xl flex items-center justify-center transition-all duration-300 ${
+                      isActive 
+                        ? `bg-${category.color}-500 text-white shadow-lg` 
+                        : `bg-${category.color}-100 text-${category.color}-600 group-hover:bg-${category.color}-200`
+                    }`}>
+                      <IconComponent className="w-8 h-8" />
+                    </div>
+                    
+                    <h4 className={`text-lg font-bold mb-2 transition-colors ${
+                      isActive ? `text-${category.color}-900` : 'text-navy-900 group-hover:text-gray-800'
+                    }`}>
+                      {category.label}
+                    </h4>
+                    
+                    <p className={`text-sm transition-colors ${
+                      isActive ? `text-${category.color}-700` : 'text-gray-600 group-hover:text-gray-700'
+                    }`}>
+                      {category.description}
+                    </p>
+                    
+                    <div className={`mt-4 text-xs font-medium transition-colors ${
+                      isActive ? `text-${category.color}-600` : 'text-gray-500'
+                    }`}>
+                      {calculators.filter(calc => calc.category === category.id).length} calculators
+                    </div>
+                  </CardContent>
+                </Card>
+              );
+            })}
           </div>
         </div>
 
