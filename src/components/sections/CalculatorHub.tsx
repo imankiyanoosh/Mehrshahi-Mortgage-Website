@@ -133,7 +133,7 @@ const CalculatorHub: React.FC = () => {
                     </div>
                   </div>
                   <Link to={`/calculators/${featuredCalculator.slug}`}>
-                    <Button size="lg" className="w-full bg-white text-blue-600 hover:bg-blue-50">
+                    <Button size="lg" className="w-full !bg-white !text-blue-600 hover:bg-blue-50">
                       Use Full Calculator
                       <ArrowRight className="w-5 h-5 ml-2" />
                     </Button>
