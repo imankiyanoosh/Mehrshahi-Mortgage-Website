@@ -1,6 +1,16 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
+    safelist: [
+    'bg-emerald-100', 'bg-emerald-200', 'text-emerald-600', 'text-emerald-800', 'border-emerald-600',
+    'bg-blue-100', 'bg-blue-200', 'text-blue-600', 'text-blue-800', 'border-blue-600',
+    'bg-purple-100', 'bg-purple-200', 'text-purple-600', 'text-purple-800', 'border-purple-600',
+    'bg-orange-100', 'bg-orange-200', 'text-orange-600', 'text-orange-800', 'border-orange-600',
+    'bg-lime-100', 'bg-lime-200', 'text-lime-600', 'text-lime-800', 'border-lime-600',
+    'bg-pink-100', 'bg-pink-200', 'text-pink-600', 'text-pink-800', 'border-pink-600',
+    'bg-amber-100', 'bg-amber-200', 'text-amber-600', 'text-amber-800', 'border-amber-600',
+    'bg-sky-100', 'bg-sky-200', 'text-sky-600', 'text-sky-800', 'border-sky-600'
+  ],
   theme: {
     extend: {
       colors: {
