@@ -5,7 +5,6 @@ import MortgageRatesSection from '../sections/MortgageRatesSection';
 import CalculatorHub from '../sections/CalculatorHub';
 import CitiesSection from '../sections/CitiesSection';
 import AboutSection from '../sections/AboutSection';
-import ContactSection from '../sections/ContactSection';
 
 const HomePage: React.FC = () => {
   return (
@@ -16,7 +15,6 @@ const HomePage: React.FC = () => {
       <CalculatorHub />
       <CitiesSection />
       <AboutSection />
-      <ContactSection />
     </main>
   );
 };
