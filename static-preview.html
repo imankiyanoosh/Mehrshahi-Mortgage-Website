@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helen Mehrshahi Mortgage Solutions | Expert Home Loans in San Fernando Valley</title>
+    <meta name="description" content="Helen Mehrshahi Mortgage Solutions - Expert mortgage lending services in San Fernando Valley. Get pre-approved today with competitive rates and personalized service.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+        
+        .bg-gradient {
+            background: linear-gradient(135deg, #0a192f 0%, #1a365d 100%);
+            color: white;
+            min-height: 100vh;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .bg-gradient::before {
+            content: '';
+            position: absolute;
+            top: 5rem;
+            left: 5rem;
+            width: 18rem;
+            height: 18rem;
+            background: rgba(236, 179, 82, 0.1);
+            border-radius: 50%;
+            filter: blur(6rem);
+            animation: pulse 4s infinite;
+        }
+        
+        .bg-gradient::after {
+            content: '';
+            position: absolute;
+            bottom: 5rem;
+            right: 5rem;
+            width: 24rem;
+            height: 24rem;
+            background: rgba(255, 107, 53, 0.1);
+            border-radius: 50%;
+            filter: blur(6rem);
+            animation: pulse 4s infinite 2s;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { opacity: 0.5; }
+            50% { opacity: 1; }
+        }
+        
+        .container {
+            max-width: 80rem;
+            margin: 0 auto;
+            padding: 5rem 1rem;
+            position: relative;
+            z-index: 10;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3rem;
+            align-items: center;
+        }
+        
+        @media (min-width: 1024px) {
+            .grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        .text-center {
+            text-align: center;
+        }
+        
+        .text-left {
+            text-align: left;
+        }
+        
+        .badge {
+            display: inline-flex;
+            align-items: center;
+            padding: 0.5rem 1rem;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(4px);
+            border-radius: 9999px;
+            font-size: 0.875rem;
+            font-weight: 500;
+            margin-bottom: 1.5rem;
+        }
+        
+        .badge svg {
+            width: 1rem;
+            height: 1rem;
+            margin-right: 0.5rem;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+        }
+        
+        @media (min-width: 640px) {
+            h1 {
+                font-size: 3rem;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            h1 {
+                font-size: 3.75rem;
+            }
+        }
+        
+        .gradient-text {
+            display: block;
+            background: linear-gradient(to right, #ecb352, #d99620);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        p {
+            font-size: 1.125rem;
+            color: #d1d5db;
+            margin-bottom: 2rem;
+            max-width: 42rem;
+        }
+        
+        .rate-card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+        
+        .rate-value {
+            font-size: 2.25rem;
+            font-weight: 700;
+            color: #ecb352;
+            transition: opacity 0.3s;
+        }
+        
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+        
+        @media (min-width: 640px) {
+            .buttons {
+                flex-direction: row;
+                justify-content: center;
+            }
+        }
+        
+        @media (min-width: 1024px) {
+            .buttons {
+                justify-content: flex-start;
+            }
+        }
+        
+        .btn {
+            padding: 1rem 1.5rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+        
+        .btn-primary {
+            background: #ecb352;
+            color: white;
+            box-shadow: 0 10px 25px rgba(236, 179, 82, 0.3);
+        }
+        
+        .btn-primary:hover {
+            background: #d99620;
+            transform: translateY(-2px);
+        }
+        
+        .btn-secondary {
+            background: rgba(255, 255, 255, 0.9);
+            color: #0a192f;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .btn-secondary:hover {
+            background: white;
+        }
+        
+        .btn svg {
+            width: 1.25rem;
+            height: 1.25rem;
+            margin-left: 0.5rem;
+        }
+        
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+        
+        @media (min-width: 1024px) {
+            .stats-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+        }
+        
+        .stat-item {
+            text-align: center;
+        }
+        
+        .stat-icon {
+            width: 3rem;
+            height: 3rem;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 0.75rem;
+        }
+        
+        .stat-icon svg {
+            width: 1.5rem;
+            height: 1.5rem;
+            color: #ecb352;
+        }
+        
+        .stat-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: white;
+            margin-bottom: 0.25rem;
+        }
+        
+        .stat-label {
+            font-size: 0.875rem;
+            color: #9ca3af;
+        }
+        
+        .form-card {
+            background: white;
+            border-radius: 1.5rem;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            padding: 2rem;
+        }
+        
+        .form-card h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #0a192f;
+            margin-bottom: 0.5rem;
+            text-align: center;
+        }
+        
+        .form-card p {
+            color: #6b7280;
+            font-size: 0.875rem;
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .form-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1rem;
+        }
+        
+        @media (min-width: 640px) {
+            .form-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+        
+        .form-group {
+            margin-bottom: 1rem;
+        }
+        
+        label {
+            display: block;
+            font-size: 0.875rem;
+            font-weight: 500;
+            color: #374151;
+            margin-bottom: 0.5rem;
+        }
+        
+        select, input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #d1d5db;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+        }
+        
+        select:focus, input:focus {
+            outline: none;
+            border-color: #3b82f6;
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+        }
+        
+        .form-btn {
+            width: 100%;
+            background: #3b82f6;
+            color: white;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin: 1rem 0;
+        }
+        
+        .form-btn:hover {
+            background: #2563eb;
+        }
+        
+        .form-footer {
+            font-size: 0.75rem;
+            color: #9ca3af;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-gradient">
+        <div class="container">
+            <div class="grid">
+                <div class="text-center lg:text-left">
+                    <div class="badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                        </svg>
+                        NMLS Licensed Mortgage Professional
+                    </div>
+                    
+                    <h1>
+                        Your Dream Home
+                        <span class="gradient-text">Starts Here</span>
+                    </h1>
+                    
+                    <p>
+                        Expert mortgage solutions in the San Fernando Valley. Get pre-approved in minutes with 
+                        competitive rates and personalized service from Helen Mehrshahi.
+                    </p>
+                    
+                    <div class="rate-card">
+                        <p style="color: #9ca3af; margin-bottom: 0.5rem;">Today's Rate</p>
+                        <div class="rate-value">6.875%</div>
+                        <p style="font-size: 0.75rem; color: #9ca3af; margin-top: 0.5rem;">
+                            Rate updated every 60 minutes • APR varies by loan type
+                        </p>
+                    </div>
+                    
+                    <div class="buttons">
+                        <a href="#" class="btn btn-primary">
+                            Start Your Application
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                        </a>
+                        <a href="#" class="btn btn-secondary">
+                            Calculate Payment
+                        </a>
+                    </div>
+                    
+                    <div class="stats-grid">
+                        <div class="stat-item">
+                            <div class="stat-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z" />
+                                </svg>
+                            </div>
+                            <div class="stat-value">99%</div>
+                            <div class="stat-label">Client Satisfaction</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                </svg>
+                            </div>
+                            <div class="stat-value">24hrs</div>
+                            <div class="stat-label">Avg. Approval Time</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                                </svg>
+                            </div>
+                            <div class="stat-value">15+</div>
+                            <div class="stat-label">Years Experience</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                                </svg>
+                            </div>
+                            <div class="stat-value">$2B+</div>
+                            <div class="stat-label">Loans Closed</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-card">
+                    <h2>Get Your Rate</h2>
+                    <p>See your personalized rate in 60 seconds</p>
+                    
+                    <form>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label for="loan-type">Loan Type</label>
+                                <select id="loan-type">
+                                    <option>Purchase</option>
+                                    <option>Refinance</option>
+                                    <option>Cash-out Refi</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="property-type">Property Type</label>
+                                <select id="property-type">
+                                    <option>Single Family</option>
+                                    <option>Condo</option>
+                                    <option>Townhome</option>
+                                    <option>Multi-family</option>
+                                </select>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="home-price">Home Price</label>
+                            <input type="text" id="home-price" placeholder="$750,000">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="down-payment">Down Payment</label>
+                            <input type="text" id="down-payment" placeholder="$150,000 (20%)">
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="credit-score">Credit Score</label>
+                            <select id="credit-score">
+                                <option>740+</option>
+                                <option>680-739</option>
+                                <option>620-679</option>
+                                <option>Below 620</option>
+                            </select>
+                        </div>
+                        
+                        <button type="button" class="form-btn">
+                            Get My Rate
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                            </svg>
+                        </button>
+                        
+                        <p class="form-footer">
+                            By clicking "Get My Rate", you agree to our Terms of Service and Privacy Policy.
+                            No commitment required.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Simple animation for the rate value
+        document.addEventListener('DOMContentLoaded', function() {
+            const rateElement = document.querySelector('.rate-value');
+            const rates = ['6.875', '6.750', '6.625', '6.500', '6.750'];
+            let currentIndex = 0;
+            
+            setInterval(() => {
+                rateElement.style.opacity = '0.5';
+                setTimeout(() => {
+                    currentIndex = (currentIndex + 1) % rates.length;
+                    rateElement.textContent = rates[currentIndex] + '%';
+                    rateElement.style.opacity = '1';
+                }, 300);
+            }, 8000);
+        });
+    </script>
+</body>
+</html>

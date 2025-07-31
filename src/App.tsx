@@ -1,5 +1,7 @@
 import React from 'react';
 import { Routes, Route } from 'react-router-dom';
+import { StagewiseToolbar } from '@stagewise/toolbar-react';
+import ReactPlugin from '@stagewise-plugins/react';
 import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
 import ScrollToTop from './components/utils/ScrollToTop';
@@ -17,6 +19,11 @@ import { loanTypes } from './data/loans';
 function App() {
   return (
     <div className="min-h-screen bg-white">
+      <StagewiseToolbar 
+        config={{
+          plugins: [ReactPlugin]
+        }}
+      />
       <ScrollToTop />
       <Header />
       <Routes>

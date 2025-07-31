@@ -162,7 +162,7 @@ const Header: React.FC = () => {
 
                         {/* Redesigned Mega Menu */}
                         {activeDropdown === item.name && (
-                          <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-[900px] bg-white rounded-2xl shadow-2xl border border-gray-200 overflow-hidden animate-slide-down">
+                          <div className="absolute top-full left-1/2 transform -translate-x-1/2 mt-2 w-[900px] bg-white rounded-2xl shadow-2xl border border-gray-200 overflow-hidden animate-mega-menu-fade-in">
                             <div className="flex h-[500px]">
                               {/* Left Column - Category Tabs */}
                               <div className="w-1/3 bg-gray-50 border-r border-gray-200">

@@ -6,6 +6,7 @@ export default defineConfig({
   plugins: [react()],
   server: {
     historyApiFallback: true,
+    port: 3000,
   },
   optimizeDeps: {
     exclude: ['lucide-react'],

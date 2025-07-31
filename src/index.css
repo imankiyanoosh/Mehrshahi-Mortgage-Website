@@ -17,6 +17,92 @@
   animation: fadeIn 0.2s ease-out;
 }
 
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+/* Enhanced bento grid animations */
+@keyframes cardEntrance {
+  0% {
+    opacity: 0;
+    transform: translateY(30px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-card-entrance {
+  animation: cardEntrance 0.5s cubic-bezier(0.22, 0.61, 0.36, 1) forwards;
+}
+
+/* Load More button animations */
+@keyframes buttonPulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.animate-button-pulse {
+  animation: buttonPulse 2s infinite;
+}
+
+@keyframes buttonEntrance {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-button-entrance {
+  animation: buttonEntrance 0.3s ease-out forwards;
+}
+
+/* Smooth transitions for interactive elements */
+.transition-all {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+.transition-transform {
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+/* Bento grid specific styles */
+.bento-card {
+  transition: all 0.3s cubic-bezier(0.22, 0.61, 0.36, 1);
+}
+
+.bento-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.1);
+}
+
 .line-clamp-3 {
   display: -webkit-box;
   -webkit-line-clamp: 3;
@@ -32,19 +118,27 @@
 }
 
 /* Enhanced animations for mega menu */
-@keyframes slideDown {
+@keyframes megaMenuFadeIn {
   from {
     opacity: 0;
-    transform: translateY(-10px) scale(0.95);
+    transform: translateY(-10px);
   }
   to {
     opacity: 1;
-    transform: translateY(0) scale(1);
+    transform: translateY(0);
   }
 }
 
-.animate-slide-down {
-  animation: slideDown 0.2s ease-out;
+.animate-mega-menu-fade-in {
+  animation: megaMenuFadeIn 0.3s ease-out forwards;
+}
+
+/* Desktop-only mega menu positioning fix */
+@media (min-width: 1024px) {
+  .animate-mega-menu-fade-in {
+    /* Ensure the animation starts from the correct position */
+    transform-origin: top center;
+  }
 }
 
 /* Smooth hover transitions */

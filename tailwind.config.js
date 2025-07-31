@@ -2,14 +2,20 @@
 export default {
   content: ['./index.html', './src/**/*.{js,ts,jsx,tsx}'],
     safelist: [
-    'bg-emerald-100', 'bg-emerald-200', 'text-emerald-600', 'text-emerald-800', 'border-emerald-600',
-    'bg-blue-100', 'bg-blue-200', 'text-blue-600', 'text-blue-800', 'border-blue-600',
-    'bg-purple-100', 'bg-purple-200', 'text-purple-600', 'text-purple-800', 'border-purple-600',
-    'bg-orange-100', 'bg-orange-200', 'text-orange-600', 'text-orange-800', 'border-orange-600',
-    'bg-lime-100', 'bg-lime-200', 'text-lime-600', 'text-lime-800', 'border-lime-600',
-    'bg-pink-100', 'bg-pink-200', 'text-pink-600', 'text-pink-800', 'border-pink-600',
-    'bg-amber-100', 'bg-amber-200', 'text-amber-600', 'text-amber-800', 'border-amber-600',
-    'bg-sky-100', 'bg-sky-200', 'text-sky-600', 'text-sky-800', 'border-sky-600'
+    // Existing safelist entries
+    'bg-emerald-100', 'bg-emerald-200', 'text-emerald-600', 'text-emerald-800', 'border-emerald-600', 'ring-emerald-500',
+    'bg-blue-100', 'bg-blue-200', 'text-blue-600', 'text-blue-800', 'border-blue-600', 'ring-blue-500',
+    'bg-purple-100', 'bg-purple-200', 'text-purple-600', 'text-purple-800', 'border-purple-600', 'ring-purple-500',
+    'bg-orange-100', 'bg-orange-200', 'text-orange-600', 'text-orange-800', 'border-orange-600', 'ring-orange-500',
+    'bg-green-100', 'bg-green-200', 'text-green-600', 'text-green-800', 'border-green-600', 'ring-green-500',
+    'bg-indigo-100', 'bg-indigo-200', 'text-indigo-600', 'text-indigo-800', 'border-indigo-600', 'ring-indigo-500',
+    'bg-yellow-100', 'bg-yellow-200', 'text-yellow-600', 'text-yellow-800', 'border-yellow-600', 'ring-yellow-500',
+    'bg-red-100', 'bg-red-200', 'text-red-600', 'text-red-800', 'border-red-600', 'ring-red-500',
+    // Additional color variations that might be needed
+    'bg-emerald-500', 'bg-blue-500', 'bg-purple-500', 'bg-orange-500', 'bg-green-500', 'bg-indigo-500', 'bg-yellow-500', 'bg-red-500',
+    'text-white', 'text-white/90', 'text-white/80', 'bg-white/20', 'border-white/30',
+    // Animation classes
+    'rotate-180'
   ],
   theme: {
     extend: {
